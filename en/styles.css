@@ -1,0 +1,351 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* ----------------------- */
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    background-color: #263d4c;
+}
+
+*{
+    font-family: "Roboto", "Open Sans", "Arial";
+}
+
+p, h1, img{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#unsupported-resolution{
+    display: none;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-family: sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 25%;
+}
+
+#unsupported-resolution .desktop, #unsupported-resolution .mobile{
+    padding: 20px 60px;
+}
+
+#unsupported-resolution .mobile{
+    padding-top: 0px;
+}
+
+#unsupported-resolution img{
+    width: 190px;
+}
+
+#unsupported-resolution b{
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 20px;
+    padding-botton: 10px;
+}
+
+#container{
+    display: none;
+    will-change: transform;
+
+    position: relative;
+
+    background-color: #6db6e3;
+    background-image: url(img/clouds.png);
+    background-repeat: repeat;
+    background-size: 80%;
+
+    animation: animatedBackground 2000s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 100px;
+    }
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100000px 0;
+    }
+}
+
+#inside-container{
+    background-image: url(img/snow.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+}
+
+#container, #inside-container{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.world-object{
+    position: absolute;
+    height: auto;
+    transform-origin: top left;
+}
+
+.world-object .asset{
+    width: 100%;
+    height: auto;
+}
+
+#language{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999999999;
+    cursor: pointer;
+}
+
+
+
+#cc-logo{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 10%;
+    z-index: 999999;
+}
+
+#tree{
+    width: 600px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+#new_year{
+    width: 220px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.avatar{
+    position: absolute;
+    border-radius: 100px;
+    width: 65px;
+    height: 65px;
+    z-index: 20;
+    border: 15px solid white;
+}
+
+.avatar.completed{
+    border: 7px dotted black;
+    z-index: 10;
+}
+
+#logo-star{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: -250px;
+    left: calc(75%);
+}
+
+#instructions {
+    padding: 40px 20px;
+    font-size: 30px;
+    color: white;
+    filter: drop-shadow(0px 0px 4px black);
+    font-family: sans-serif;
+    pointer-events: none;
+    cursor: default;
+    z-index: 999;
+    text-align: center;
+    margin: 0px auto;
+    width: 85%;
+    position: relative;
+}
+
+#finalMessage{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 999999999;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+#finalMessage .fadeIn{
+    display: none;
+}
+
+#finalMessage .message img{
+    padding: 40px 40px 0 40px;
+}
+
+#finalMessage .play-again{
+    display: inline-block;
+    margin-right: 150px;
+    cursor: pointer;
+}
+
+#finalMessage .play-again p{
+    display: block;
+    padding-top: 10px;
+    font-size: 20px;
+    filter: drop-shadow(0px 0px 4px black);
+}
+
+#finalMessage .website{
+    display: inline-block;
+    text-decoration: none;
+}
+#finalMessage .website:visited{
+    color: white;
+}
+
+#finalMessage .website span{
+    display: block;
+    padding-top: 10px;
+    font-size: 20px;
+    filter: drop-shadow(0px 0px 4px black);
+}
+
+#finalMessage .play-again img, #finalMessage .website img{
+    width: 100px;
+    height: auto;
+}
+
+#loading{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    z-index: 99999999;
+}
+
+#loading img{
+    margin-top: 70px;
+}
+
+#loading p{
+    display: block;
+    font-size: 25px;
+    color: white;
+    font-family: sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+    #instructions {
+        font-size: 20px;
+    }
+
+    #unsupported-resolution {
+        position: absolute;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        font-family: sans-serif;
+    }
+
+    #unsupported-resolution b {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    #unsupported-resolution img {
+        width: 160px;
+    }
+
+    #finalMessage .message img {
+        padding: 20px 20px 0 20px;
+    }
+
+    #finalMessage .play-again{
+        margin-right: 80px;
+        margin-top: 25px;
+    }
+
+    #finalMessage .play-again img, #finalMessage .website img {
+        width: 25px;
+        display: inline;
+        height: auto;
+    }
+
+    #finalMessage .play-again p, #finalMessage .website span {
+        display: inline;
+        padding-top: 0px;
+        vertical-align: super;
+    }
+
+}
