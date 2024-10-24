@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <title>Creative Coefficient - End of year 2020</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="global.js"></script>
+    <script src="snow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="unsupported-resolution">
+        <img class="desktop" src="img/robot.png">
+        <img class="mobile" src="img/landscape.png">
+        <br />
+        <p class="desktop"><b>¡Oh, no!</b> <br /><br />Tu resolución no está soportada. Cambia el tamaño de la ventana de forma apaisada para poder jugar.</p>
+        <p class="mobile"><br />Rota tu teléfono de forma apaisada para poder jugar :)</p>
+    </div>
+
+
+    <img id="cc-logo" src="img/only_logo_cc.png" />
+
+    <img id="language" class="en" src="img/en.png" />
+
+
+    <div id="loading">
+        <img src="img/loading.gif" />
+        <p>Cargando, porfavor espera :)</p>
+    </div>
+
+
+    <div id="container">
+
+        <div id="inside-container">
+
+            <div id="new_year" class="world-object">
+                <img class="asset" class="world-object" src="img/new_year.png" />
+            </div>
+
+            <div id="tree" class="world-object">
+                <img class="asset" class="world-object" src="img/tree.png" />
+            </div>
+
+            <p id="instructions">
+                <span class="desktop">Mové tu cursor sobre los miembros del equipo Creative para decorar el arbolito de navidad!</span>
+                <span class="mobile">Tocá sobre los miembros del equipo Creative para decorar el arbolito de navidad!</span>
+            </p>
+
+
+            <img class="avatar world-object" src="img/avatars/1.jpg" posX="272" posY="78" />
+            <img class="avatar world-object" src="img/avatars/2.jpg" posX="332" posY="84" />
+            <img class="avatar world-object" src="img/avatars/3.jpg" posX="310" posY="150" />
+            <img class="avatar world-object" src="img/avatars/4.jpg" posX="228" posY="132" />
+            <img class="avatar world-object" src="img/avatars/5.jpg" posX="390" posY="150" />
+            <img class="avatar world-object" src="img/avatars/6.jpg" posX="267" posY="205" />
+            <img class="avatar world-object" src="img/avatars/7.jpg" posX="195" posY="190" />
+            <img class="avatar world-object" src="img/avatars/8.jpg" posX="236" posY="275" />
+            <img class="avatar world-object" src="img/avatars/9.jpg" posX="350" posY="218" />
+            <img class="avatar world-object" src="img/avatars/10.jpg" posX="430" posY="245" />
+            <img class="avatar world-object" src="img/avatars/11.jpg" posX="170" posY="325" />
+            <img class="avatar world-object" src="img/avatars/12.jpg" posX="170" posY="260" />
+            <img class="avatar world-object" src="img/avatars/13.jpg" posX="260" posY="340" />
+            <img class="avatar world-object" src="img/avatars/14.jpg" posX="305" posY="285" />
+            <img class="avatar world-object" src="img/avatars/15.jpg" posX="353" posY="380" />
+            <img class="avatar world-object" src="img/avatars/16.jpg" posX="375" posY="310" />
+            <img class="avatar world-object" src="img/avatars/17.jpg" posX="440" posY="330" />
+            <img class="avatar world-object" src="img/avatars/18.jpg" posX="488" posY="423" />
+            <img class="avatar world-object" src="img/avatars/19.jpg" posX="113" posY="415" />
+            <img class="avatar world-object" src="img/avatars/20.jpg" posX="190" posY="395" />
+            <img class="avatar world-object" src="img/avatars/21.jpg" posX="214" posY="452" />
+            <img class="avatar world-object" src="img/avatars/22.jpg" posX="286" posY="413" />
+            <img class="avatar world-object" src="img/avatars/23.jpg" posX="356" posY="465" />
+            <img class="avatar world-object" src="img/avatars/24.jpg" posX="420" posY="420" />
+            <img class="avatar world-object" src="img/avatars/25.jpg" posX="152" posY="482" />
+            <img class="avatar world-object" src="img/avatars/26.jpg" posX="76" posY="526" />
+            <img class="avatar world-object" src="img/avatars/27.jpg" posX="201" posY="541" />
+            <img class="avatar world-object" src="img/avatars/28.jpg" posX="261" posY="494" />
+            <img class="avatar world-object" src="img/avatars/29.jpg" posX="345" posY="532" />
+            <img class="avatar world-object" src="img/avatars/30.jpg" posX="444" posY="492" />
+            <img class="avatar world-object" src="img/avatars/31.jpg" posX="532" posY="530" />
+
+            <img id="logo-star" class="world-object" src="img/CC-navidad.png" />
+
+        </div>
+
+    </div>
+
+    <div id="finalMessage">
+        <div class="fadeIn">
+            <div class="message">
+                <img src="img/happy_holidays.png">
+            </div>
+
+            <div class="play-again">
+                <img src="img/play_again.png" />
+                <p>Jugar de nuevo!</p>
+            </div>
+            <a class="website" href="https://www.creativecoefficient.net/">
+                <img src="img/website.png" />
+                <span>Visita nuestra web</span>
+            </a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
